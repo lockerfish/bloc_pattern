@@ -1,8 +1,9 @@
-# bloc_one
+# Learning Flutter BLoC Pattern
 
-A new Flutter project.
+A simple app to hep understand StreamController, Stream and Sink
 
-## Getting Started
+This program recreates the Flutter Counter template app using [Stream]
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+Note:
+ 	- Not need for setState()
+ 	- Data flows via [StreamController] using a [Sink] or INPUT and [Stream] or OUTPUT
