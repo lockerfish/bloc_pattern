@@ -6,12 +6,6 @@ import 'package:bloc_one/models/user.dart';
 class BlocUserPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-    String _newName;
-=======
-    /// This is how we get this widget business logic component.
-    /// Basically, we ask the [BlocProvider] for it.
->>>>>>> c184e19cba68e7558f5ed1532f392c19949a8d1b
     final UserBloc userBloc = BlocProvider.of<UserBloc>(context);
 
     return Scaffold(
@@ -21,23 +15,11 @@ class BlocUserPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             StreamBuilder<User>(
-<<<<<<< HEAD
               stream: userBloc.outUser,
-=======
-              /// Data flows to this widget via [Stream]
-              stream: userBloc.outUser,
-
-              /// initalize [Stream]
->>>>>>> c184e19cba68e7558f5ed1532f392c19949a8d1b
               builder: (BuildContext context, AsyncSnapshot<User> snapshot) {
                 if (snapshot.hasData) {
                   return Text(
                     '${snapshot.data.name}',
-<<<<<<< HEAD
-=======
-
-                    /// snapshot.data is the int value in the [Stream]
->>>>>>> c184e19cba68e7558f5ed1532f392c19949a8d1b
                     style: Theme.of(context).textTheme.display1,
                   );
                 } else {
@@ -45,7 +27,6 @@ class BlocUserPage extends StatelessWidget {
                 }
               },
             ),
-<<<<<<< HEAD
             StreamBuilder<User>(
               stream: userBloc.outUser,
               builder: (BuildContext context, AsyncSnapshot<User> snapshot) {
@@ -66,16 +47,6 @@ class BlocUserPage extends StatelessWidget {
           ],
         ),
       ),
-=======
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
->>>>>>> c184e19cba68e7558f5ed1532f392c19949a8d1b
     );
   }
 }
