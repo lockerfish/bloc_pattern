@@ -33,6 +33,13 @@ class BlocUserPage extends StatelessWidget {
                 if (snapshot.hasData) {
                   return TextField(
                     onChanged: (value) {
+                      /// We can also use the user class
+                      /// in that case, we don't need [UserBloc] updateName
+                      ///
+                      // User _newUser = snapshot.data;
+                      // _newUser.name = value;
+                      // userBloc.updateUser.add(_newUser);
+
                       userBloc.updateName.add(value);
                     },
                     decoration: InputDecoration(
