@@ -15,6 +15,7 @@ class UserBloc implements BlocBase {
   StreamController<User> _updateUserController = StreamController<User>();
   Sink<User> get updateUser => _updateUserController.sink;
 
+  /// Convinience Stream to update [User] name
   StreamController<String> _updateNameController = StreamController<String>();
   Sink<String> get updateName => _updateNameController.sink;
 
