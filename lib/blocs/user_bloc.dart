@@ -7,8 +7,12 @@ class UserBloc implements BlocBase {
   User _user;
 
   /// Handling [User] entity
+<<<<<<< HEAD
   /// broadcast() let stream be listened to by multiple listeners
   StreamController<User> _userController = StreamController<User>.broadcast();
+=======
+  StreamController<User> _userController = StreamController<User>();
+>>>>>>> c184e19cba68e7558f5ed1532f392c19949a8d1b
   Sink<User> get _inUser => _userController.sink;
   Stream<User> get outUser => _userController.stream;
 
@@ -17,7 +21,11 @@ class UserBloc implements BlocBase {
   Sink<User> get updateUser => _updateUserController.sink;
 
   StreamController<String> _updateNameController = StreamController<String>();
+<<<<<<< HEAD
   Sink<String> get updateName => _updateNameController.sink;
+=======
+  Sink<User> get updateName => _updateUserController.sink;
+>>>>>>> c184e19cba68e7558f5ed1532f392c19949a8d1b
 
   UserBloc() {
     api.getUser().then((user) {
